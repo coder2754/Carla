@@ -154,3 +154,8 @@ jobs:
         run: make features
       - name: make
         run: make -j $(nproc)
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: Release
+          path: ./
